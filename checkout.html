@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>UXD Cards - 75 Method Cards</title>
+    <meta name="description" content=“75 method and technique cards for UX designers. A fantastic tool for workshops, project planning and learning UX techniques.”>
+    <meta name="keywords" content=“UX, user experience, designer, tools, principles, learn, process, cards, course, developer”>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="_stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wow/animate.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="responsive.css" media="(max-width:900px)">
+
+</head>
+
+<body>
+    <header class="home checkout_header inner-page-header">
+        <div class="container checkout_container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="./images/uxd-logo.png" alt="logo">
+                            </a>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right checkout_navbar">
+                                <li class="check_li">
+                                    <a class="check_a" href="#">
+                                        <img src="images/checkout/basket.png" alt="Basket">
+                                        <span class="cart_span">Cart</span>
+                                    </a>
+                                </li>
+                                <li class="check_li">
+                                    <a class="check_a" href="#">
+                                        <!--<img src="images/checkout/numb5.png" alt="numb5">-->
+                                        <span class="pcount" id="pcount">1</span>
+                                        <span class="uxdcard_deck brandontext-regular">UXD Card Deck</span>
+                                    </a>
+                                    <img class="confirm_msg" src="images/checkout/confirmmsg.png" alt="Confirm Message">
+                                </li>
+                                <li class="check_li">
+                                    <a href="#" data-toggle="modal" data-target="#notify" class="notify checkout_card">Checkout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <h3 class="checkout_title europe_txt white-text">
+                        Checkout
+                    </h3>
+                    <h4 class="brandontext-regular checkout_desc white-text">
+                        This is where the magic happens! <br> We’ll get them to the right address as<br> fast as we possible can - that’s for<br> sure
+                    </h4>
+                </div>
+                <div class="col-sm-12 check_float_cards">
+                    <img class="hidden_mb" src="images/checkout/speed-dating.png" alt="card">
+                    <img class="hidden_mb" src="images/checkout/scenarios_4.26.15_pm.png" alt="card">
+                    <img class="hidden_mb" src="images/checkout/personal-inventory.png" alt="card">
+                    <img class="hidden_mb" src="images/checkout/empathy-mapping.png" alt="card">
+                    <img class="hidden_mb" src="images/checkout/aa.png" alt="card">
+                    <img class="hidden_mb" src="images/checkout/moodboard_4.26.15_pm.png" alt="card">
+                    <img class="hidden_mb" src="images/checkout/gt_4.26.15_pm.png" alt="card">
+                    <img class="visible mb1" src="images/checkout/mb1.png" alt="card">
+                    <img class="visible mb2" src="images/checkout/mb2.png" alt="card">
+                    <img class="visible mb3" src="images/checkout/mb3.png" alt="card">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="select_section">
+        <div class="container payment-container">
+            <img class="check_numbs" src="images/checkout/numb1.png" alt="numb1">
+            <div class="row">
+                <div class="col-md-6 units_col">
+                    <h5 class="select_volume_title bold_txt">Select your volume</h5>
+                    <h6 class="select_desc_mb brandontext-regular">
+                        How many decks would you like? Don’t<br> forget your friends and team!
+                    </h6>
+                    <h6 class="units_title med_txt">Units</h6>
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                        <input class="quantity" min="1" name="quantity" value="1" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                    </div>
+                </div>
+                <div class="col-md-3 cost_block">
+                    <h6 class="cost_title med_txt">Cost</h6>
+                    <ul class="cost_ul">
+                        <li class="subtotal brandontext-regular">
+                            Subtotal
+                            <span class="units_price med_txt">$97</span>
+                        </li>
+                        <li class="shipping brandontext-regular">
+                            Shipping
+                            <span class="units_price med_txt">$30</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 total_block">
+                    <h6 class="total_title med_txt">TOTAL TO PAY</h6>
+                    <div class="total">$127</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="general_form" name="general_form" class="add_form">
+        <div class="address_section">
+            <div class="container payment-container">
+                <img class="check_numbs" src="images/checkout/numb2.png" alt="numb2">
+                <div class="row">
+                    <div class="billing_form clearfix">
+                        <h5 class="enter_title m_d bold_txt">Enter your delivery address</h5>
+                        <div class="billing-info col-md-12 col-xs-12">
+                            <h6 class="bil_title med_txt">BILLING ADDRESS *</h6>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="input-radio">
+                                    <input id="input_same_billing" type="radio" name="address_choice" value="same_billing">
+                                    <label for="input_same_billing">Yes, they are the same</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="input-radio">
+                                    <input id="input_diff_billing" type="radio" name="address_choice" value="diff_billing">
+                                    <label for="input_diff_billing">Enter another address</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="address-info col-md-12 col-xs-12">
+                            <h6 class="bil_title med_txt">TYPE OF ADDRESS *</h6>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="input-radio">
+                                    <input id="input_addr_home" type="radio" name="addr_type" value="addr_home">
+                                    <label for="input_addr_home">Home/Residential</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="input-radio">
+                                    <input id="input_addr_off" type="radio" name="addr_type" value="addr_off">
+                                    <label for="input_addr_off">Office/Commercial</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xs-12 address_col clearfix">
+                        <div id="general_form" class="add_form col-xs-12">
+                            <h3>Billing Address</h3>
+                            <div class="big_input">
+                                <label class="med_txt" for="address">ADDRESS *</label>
+                                <span id="loc_icon"></span>
+                                <input id="address" class="loc_icon" name="bill_address" type="text" placeholder="Unit/Street number and address">
+                            </div>
+                            <div class="small_inputs_row clearfix">
+                                <div class="col-md-6 small_inputs">
+                                    <label class="med_txt" for="cityName">CITY/DISTRICT *</label>
+                                    <span id="city_icon"></span>
+                                    <input class="city_icon" id="cityName" name="bill_city" type="text" placeholder="Name of city ">
+                                </div>
+                                <div class="col-md-6 small_inputs">
+                                    <label class="med_txt" for="state">STATE *</label>
+                                    <span id="state_icon"></span>
+                                    <input class="state_icon" id="state" type="text" name="bill_state" placeholder="Name of state">
+                                </div>
+                            </div>
+                            <div class="small_inputs_row clearfix">
+                                <div class="col-md-6 small_inputs ">
+                                    <label class="med_txt" for="zip">ZIP/POSTCODE</label>
+                                    <span id="zip_icon"></span>
+                                    <input id="zip" class="zip_icon" type="number" name="bill_zip" placeholder="Zip/Post code">
+                                </div>
+                                <div class="col-md-6 small_inputs">
+                                    <label class="med_txt" for="company">COMPANY * </label>
+                                    <span id="company_icon"></span>
+                                    <input id="company" class="company_icon" type="text" name="bill_company" placeholder="Company name">
+                                </div>
+                            </div>
+                            <div class="small_inputs_row clearfix">
+                                <div class="col-md-6 small_inputs">
+                                    <label class="med_txt" for="name">NAME *</label>
+                                    <span id="name_icon"></span>
+                                    <input id="name" class="name_icon" type="text" name="bill_name" placeholder="First and last name">
+                                </div>
+                                <div class="col-md-6 small_inputs">
+                                    <label class="med_txt" for="phone">PHONE NUMBER * </label>
+                                    <span id="phone_icon"></span>
+                                    <input id="phone" class="phone_icon" type="number" name="bill_phonenumber" placeholder="Best phone number">
+                                </div>
+                            </div>
+                            <div class="big_input">
+                                <label class="med_txt" for="email">EMAIL ADDRESS*</label>
+                                <span id="email_icon"></span>
+                                <input id="email" class="email_icon" type="email" name="bill_email" placeholder="Your email address">
+                            </div>
+                        </div>
+                        <div id="shipping_form" class="add_form col-xs-12">
+                            <h3>Shipping Address</h3>
+                            <div class="big_input">
+                                <label class="med_txt" for="address">ADDRESS *</label>
+                                <span id="loc_icon"></span>
+                                <input id="address" class="loc_icon" type="text" name="ship_address" placeholder="Unit/Street number and address">
+                            </div>
+                            <div class="small_inputs_row clearfix">
+                                <div class="col-md-6 small_inputs">
+                                    <label class="med_txt" for="cityName">CITY/DISTRICT *</label>
+                                    <span id="city_icon"></span>
+                                    <input class="city_icon" id="cityName" type="text" name="ship_city" placeholder="Name of city ">
+                                </div>
+                                <div class="col-md-6 small_inputs">
+                                    <label class="med_txt" for="state">STATE *</label>
+                                    <span id="state_icon"></span>
+                                    <input class="state_icon" id="state" type="text" name="ship_state" placeholder="Name of state">
+                                </div>
+                            </div>
+                            <div class="big_input">
+                                <label class="med_txt" for="zip">ZIP/POSTCODE</label>
+                                <span id="zip_icon"></span>
+                                <input id="zip" class="" type="number" name="ship_zip" placeholder="Zip/Post code">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="payment_section">
+        <div class="container payment-container">
+            <img class="check_numbs" src="images/checkout/numb3.png" alt="numb3">
+            <div class="row">
+                <h5 class="enter_title m_d bold_txt">Select your preferred payment method</h5>
+                <div class="ss-icon">SECURE SERVER</div>
+                <div class="col-md-8 payment_system">
+                    <div id="dropin-container"></div>
+                    <h6 class="pay_method_label brandon-bold">Select payment method</h6>
+                    <button id="submit-button" class="cards_btn pay_btn">Request Payment Method</button>
+                </div>
+                <div class="col-md-3 included">
+                    <h6 class="med_txt">What’s included? </h6>
+                    <ul class="included_list">
+                        <li class="lato-regular">75 Method Card deck</li>
+                        <li class="lato-regular">Access to online library</li>
+                        <li class="lato-regular">Worksheets &amp; templates</li>
+                        <li class="lato-regular">Expedited shipping</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block-view">
+        <div class="content clearfix">
+            <div class="content-wrap">
+                <div class="method-center-col">
+                    <div class="method-center">
+                        <h5>Get Your UXD Method Cards Now</h5>
+                        <a href="#" data-toggle="modal" data-target="#notify" class="cards_btn rounded-button">Get Cards</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="logo-footer">
+                        <a href="index.html" title=""><img src="images/uxd-logo-footer.png" alt=""></a>
+                    </div>
+                    <div class="quick-links">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="index.html">Home</a></td>
+                                    <td><a href="about.html">About</a></td>
+                                    <td><a href="cards.html">Cards</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" data-toggle="modal" data-target="#contact">Contact</a></td>
+                                    <td><a href="uses-bk.html" data-toggle="modal" data-target="#suggest">Uses</a></td>
+                                    <td><a href="faq.html">FAQ</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" data-toggle="modal" data-target="#privacy">Privacy</a></td>
+                                    <td><a href="#" data-toggle="modal" data-target="#terms-popup">Terms</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul class="quick-links-ul links_responsive">
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#contact">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#privacy">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#terms-popup">Terms</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <a href="https://twitter.com/uxdcards" title="Twitter" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/uxd-cards" title="Linkedin" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/uxdcards" title="Facebook" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/uxdcards" title="Instagram" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="social_mobile">
+                        <a href="https://www.facebook.com/uxdcards" title="Facebook" target="_blank">
+                            <img src="images/fb.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/company/uxd-cards" title="Linkedin" target="_blank">
+                            <img src="images/in.png" alt="Linkedin">
+                        </a>
+                        <a href="https://twitter.com/uxdcards" title="Twitter" target="_blank">
+                            <img src="images/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="https://www.instagram.com/uxdcards" title="Instagram" target="_blank">
+                            <img src="images/insta.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal" id="contact">
+        <div class="modal-dialog">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+            <form action="" class="form-submit">
+                <div class="modal-content">
+
+                    <div class="contact-head">
+                        <div class="left">
+                            <h3 class="brandontext-regular fs-38 text-center dark-474747">Would you like to interact?</h3>
+                            <p>We’re always interested in meeting like-minded folks and discussing UX, so email us and let’s chat!</p>
+                        </div>
+                        <div class="right">
+                            <img src="images/interactive-design@3x.png" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><img class="icon icon-your" src="images/icon/ic_your.png" alt="icon"></span>
+                                    <input type="text" name="user-name" placeholder="Your name" class="form-control required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><img class="icon icon-email" src="images/icon/ic_email.png" alt="icon"></span>
+                                    <input type="email" name="user-email" placeholder="Email Address" class="form-control required">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="text-area input-group-addon"><i class="fa fa-commenting-o"></i></span>
+                                <textarea rows="5" name="message" placeholder="Your message" class="form-control required"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mg-top-37">
+                        <div class="text-center w-156 b-center">
+                            <input type="submit" class="cards_btn rounded-button pd-left-right-40" value="send">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="notify">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="content">
+                    <div id="mc_embed_signup">
+                        <div id="mc_embed_signup_scroll">
+                            <!--start-->
+                            <div class="text-center">
+                                <h3 class="brandontext-regular fs-34 text-center dark-474747">Want UXD Cards?</h3>
+                            </div>
+                            <div class="content">
+                                <div class="text-center">
+                                    <p class="dark-434343 fs-21 brandontext-regular">They’re about to go on sale. Get notified when we launch!</p>
+                                </div>
+                                <div class="updates">
+                                    <form action="//tranzoo.us1.list-manage.com/subscribe/post-json?u=bd430eb305d3bf72bec0867ea&amp;id=12bfcce791&amp;c=?" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-submit" target="_blank">
+                                        <div class="col-sm-6 col-lg-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><img class="icon icon-your" src="images/icon/ic_your.png" alt="icon"></span>
+                                                    <input type="text" name="FNAME" id="mce-FNAME" placeholder="Your name" class="form-control required">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><img class="icon icon-email" src="images/icon/ic_email.png" alt="icon"></span>
+                                                    <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" class="form-control required">
+                                                </div>
+                                            </div>
+                                            <div class="text-center mg-top-37">
+                                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bd430eb305d3bf72bec0867ea_12bfcce791" tabindex="-1" value=""></div>
+                                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="cards_btn" value="NOTIFY ME">
+                                                <input type="hidden" name="form-name" value="form-notify" />
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="default.js"></script>
+    <script src="wow/wow.min.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.22.1/js/dropin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script>
+        function check_shipping() {
+            if ($("#input_diff_billing").is(':checked')) {
+                $("#shipping_form").hide();
+                $("#general_form h3").hide();
+            } else {
+                $("#general_form h3").show();
+                $("#shipping_form").show();
+            }
+        }
+        check_shipping();
+        $(".billing-info label").click(function() {
+            check_shipping();
+        })
+
+    </script>
+    <script>
+        var button = document.querySelector('#submit-button');
+        var price = 97;
+        var qt = jQuery('.quantity').val();
+        var subtotal = price * qt;
+        var shp_cost = 30;
+        var amount = subtotal + shp_cost;
+        braintree.dropin.create({
+            authorization: 'sandbox_q7zbnn2w_zf5j2x3782c4tkc8',
+            container: '#dropin-container',
+            paypal: {
+                flow: 'checkout',
+                amount: amount,
+                currency: 'USD'
+            },
+            applePay: {
+                displayName: 'Merchant Name',
+                paymentRequest: {
+                    label: 'Localized Name',
+                    total: amount
+                }
+            },
+        }, function(createErr, instance) {
+            if (createErr) {
+                console.error(createErr);
+                return;
+            }
+
+            button.addEventListener('click', function() {
+
+                $("#general_form").validate({
+                    rules: {
+                        pname: "address_choice",
+                    },
+                    messages: {
+                        pname: "Please select billing address",
+                    },
+                });
+
+
+                instance.requestPaymentMethod(function(requestPaymentMethodErr, payload) {
+                    if (requestPaymentMethodErr) {
+                        console.error(requestPaymentMethodErr);
+                        return;
+                    }
+
+                    window.location.replace('http://54.156.167.50/uxdcards/ordersummary.html');
+                });
+            });
+        });
+
+    </script>
+    <script>
+        new WOW().init();
+
+    </script>
+    <script type="text/javascript">
+        window.heap = window.heap || [], heap.load = function(e, t) {
+            window.heap.appid = e, window.heap.config = t = t || {};
+            var r = t.forceSSL || "https:" === document.location.protocol,
+                a = document.createElement("script");
+            a.type = "text/javascript", a.async = !0, a.src = (r ? "https:" : "http:") + "//cdn.heapanalytics.com/js/heap-" + e + ".js";
+            var n = document.getElementsByTagName("script")[0];
+            n.parentNode.insertBefore(a, n);
+            for (var o = function(e) {
+                    return function() {
+                        heap.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                    }
+                }, p = ["addEventProperties", "addUserProperties", "clearEventProperties", "identify", "removeEventProperty", "setEventProperties", "track", "unsetEventProperty"], c = 0; c < p.length; c++) heap[p[c]] = o(p[c])
+        };
+        heap.load("1101135621");
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-89303361-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.bil_inputs').click(function() {
+                $(this).toggleClass('checked');
+            })
+            $('.paypal_checkbox').click(function() {
+                $(this).parent().toggleClass('active_border');
+            })
+            $('.add_input_mb').click(function() {
+                $(this).toggleClass('active_border');
+            })
+            $('.uxdcard_deck').click(function() {
+                $('.confirm_msg').toggle();
+            });
+        });
+
+    </script>
+    <script src="custom.js"></script>
+</body>
+
+</html>
